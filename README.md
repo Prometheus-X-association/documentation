@@ -1,6 +1,6 @@
 # Prometheus-X Documentation
 
-Source of the Prometheus-X documentation site, built with [MkDocs](https://www.mkdocs.org) and the [Material](https://squidfunk.github.io/mkdocs-material/) theme. The setup mirrors the VisionsTrust documentation for consistency.
+Source of the Prometheus-X documentation site, built with [MkDocs](https://www.mkdocs.org) and the [Material](https://squidfunk.github.io/mkdocs-material/) theme.
 
 ## Build locally
 

@@ -4,9 +4,10 @@ site_author: Prometheus-X
 docs_dir: docs
 site_dir: ./site
 use_directory_urls: false
-# site_url: https://prometheus-x-association.github.io/docs/
-# repo_url: https://github.com/Prometheus-X-association/docs
-# edit_uri: blob/main/docs/
+site_url: https://prometheus-x-association.github.io/documentation/
+repo_url: https://github.com/Prometheus-X-association/documentation
+repo_name: Prometheus-X-association/documentation
+edit_uri: edit/main/docs/
 copyright: Prometheus-X 2026. Content licensed under MIT unless stated otherwise.
 
 plugins:
