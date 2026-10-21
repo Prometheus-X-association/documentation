@@ -1,0 +1,141 @@
+site_name: Prometheus-X Documentation
+site_description: Technical documentation and onboarding for the Prometheus-X dataspace stack
+site_author: Prometheus-X
+docs_dir: docs
+site_dir: ./site
+use_directory_urls: false
+# site_url: https://prometheus-x-association.github.io/docs/
+# repo_url: https://github.com/Prometheus-X-association/docs
+# edit_uri: blob/main/docs/
+copyright: Prometheus-X 2026. Content licensed under MIT unless stated otherwise.
+
+plugins:
+  - search
+  - mermaid2
+  - macros:
+      # Pages opt in with `render_macros: true` in their front matter, so that
+      # contributed pages containing `{{ ... }}` (Helm, Jinja, mustache) are left untouched.
+      render_by_default: false
+  - git-revision-date-localized:
+      # Uncommitted pages fall back to the build date without failing `mkdocs build --strict`.
+      strict: false
+      fallback_to_build_date: true
+      locale: en
+      timezone: Europe/Paris
+
+extra:
+  ptx_github: https://github.com/Prometheus-X-association
+  pdc_repo: https://github.com/Prometheus-X-association/dataspace-connector
+  pdc_wiki: https://github.com/Prometheus-X-association/dataspace-connector/wiki
+  pdc_latest: 1.11.0
+  pdc_next: 1.12.0
+  dsif_wiki: https://gitlab.com/prometheus-x/data-space-interoperability-framework/-/wikis/home
+  operator:
+    name: VisionsTrust
+    company: Visions
+    app_url: https://visionstrust.com
+    docs_url: https://docs.visionstrust.com
+    catalog_uri: https://api.visionstrust.com/v1/
+    contract_uri: https://contract.visionstrust.com/
+    consent_uri: https://consent.visionstrust.com/v1
+    settings_url: https://visionstrust.com/dashboard/profile/settings
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+theme:
+  name: material
+  # logo: assets/logo.svg
+  # favicon: assets/favicon.ico
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
+    - content.tabs.link
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+
+nav:
+  - Home:
+      - index.md
+      - Roadmap: roadmap.md
+      - Contribute to these docs: contributing.md
+  - Learn:
+      - learn/index.md
+      - Roles: learn/roles.md
+      - Offers, use cases and contracts: learn/contracts-and-policies.md
+      - Personal data and consent: learn/personal-data-and-consent.md
+      - Service chains: learn/service-chains.md
+      - Identity and trust: learn/identity-and-trust.md
+      - Glossary: learn/glossary.md
+  - Core components:
+      - components/index.md
+      - Catalogue: components/catalogue.md
+      - Catalog Registry: components/catalog-registry.md
+      - Contract Manager: components/contract-manager.md
+      - Consent Manager: components/consent-manager.md
+      - Running the core services: components/operating.md
+  - Join a dataspace:
+      - participants/index.md
+      - 1. Onboard to a catalogue: participants/onboarding.md
+      - 2. Offers and use cases: participants/offers-and-use-cases.md
+      - 3. Get a connector: participants/get-a-connector.md
+      - 4. Connect your systems: participants/connect-your-systems.md
+      - 5. Run your first exchange: participants/first-exchange.md
+      - 6. Personal data (optional): participants/personal-data.md
+  - Connector:
+      - connector/index.md
+      - Deploy and configure: connector/deploy.md
+      - Connect your applications: connector/applications.md
+      - Exchange flows: connector/exchange-flows.md
+      - Reference: connector/reference.md
+  - Interoperability:
+      - interoperability/index.md
+      - Why a dedicated protocol: interoperability/why-a-dedicated-protocol.md
+      - Eclipse DSP and EDC: interoperability/dsp-and-edc.md
+      - Gaia-X: interoperability/gaia-x.md
+      - Simpl: interoperability/simpl.md
+      - DSIF: interoperability/dsif.md
+      - Standards: interoperability/standards.md
+  - Building blocks:
+      - building-blocks/index.md
